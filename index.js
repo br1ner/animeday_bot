@@ -7,7 +7,7 @@ http.createServer((request, response) => {
         sendMsg(parseUrl.query)
         response.end('good');
     }
-}).listen(3000);
+}).listen(3000, 'testrctprjct.herokuapp.com');
 
 const sendMsg = async ({title, episode}) => {
     await bot.sendMessage(814253143, `
