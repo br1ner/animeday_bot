@@ -20,7 +20,7 @@ const express = require('express'),
     url = require('url');
 let app = express();
 
-app.get('/', (res, req) => {
+app.get('/s', (res, req) => {
     console.log(res.query);
     sendMsg(res.query)
 })
