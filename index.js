@@ -2,11 +2,10 @@ const http = require('http'),
     url = require('url');
 
 http.createServer((request, response) => {
-    if (request.method == 'OPTIONS') {
+    console.log('create server');
         let parseUrl = url.parse(request.url, true);
         sendMsg(parseUrl.query)
         response.end('good');
-    }
 }).listen(3000, 'testrctprjct.herokuapp.com');
 
 const sendMsg = async ({title, episode}) => {
